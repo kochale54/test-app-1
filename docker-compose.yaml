@@ -1,7 +1,8 @@
 version:3
 service:
-  image: 'tomcat:9'
-  ports:
-  - '8080:8080'
-  volumes:
-  - '/data/backup/game-of-life/gameoflife-web/target/gameoflife.war:/usr/local/tomcat/webapps'
+  webserver:
+    image: 'tomcat:9'
+    ports:
+     - '8080:8080'
+    volumes:
+     - '/data/backup/game-of-life/gameoflife-web/target/gameoflife.war:/usr/local/tomcat/webapps'
